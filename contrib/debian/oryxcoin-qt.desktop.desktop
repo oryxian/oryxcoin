@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Oryxcoin
+Comment=Oryxcoin P2P Cryptocurrency
+Exec=oryxcoin-qt %u
+Terminal=false
+Type=Application
+Icon=oryxcoin128
+MimeType=x-scheme-handler/oryxcoin;
+Categories=Office;Finance;
+Name[en_US]=oryxcoin-qt.desktop

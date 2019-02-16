@@ -1,0 +1,26 @@
+[Unit]
+Description=Oryxcoin's distributed currency daemon
+After=network.target
+
+[Service]
+User=oryxcoin
+Group=oryxcoin
+
+Type=forking
+PIDFile=/var/lib/oryxcoind/oryxcoind.pid
+
+ExecStart=/usr/bin/oryxcoind -daemon -pid=/var/lib/oryxcoind/oryxcoind.pid \
+          -conf=/etc/oryxcoin/oryxcoin.conf -datadir=/var/lib/oryxcoind
+
+ExecStop=-/usr/bin/oryxcoin-cli -conf=/etc/oryxcoin/oryxcoin.conf \
+         -datadir=/var/lib/oryxcoind stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

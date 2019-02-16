@@ -1,0 +1,11 @@
+[Protocol]
+exec=oryxcoin-qt '%u'
+protocol=oryxcoin
+input=none
+output=none
+helper=true
+listing=
+reading=false
+writing=false
+makedir=false
+deleting=false
